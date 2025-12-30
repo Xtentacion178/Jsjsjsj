@@ -6186,7 +6186,7 @@ function Library:CreateWindow(WindowInfo)
         end
 
         if LayoutRefs.RightWrapper then
-            local PositionX = SidebarWidth + 8
+            local PositionX = SidebarWidth + 15
             LayoutRefs.RightWrapper.Position = UDim2.new(0, PositionX, 0.5, 0)
             LayoutRefs.RightWrapper.Size = UDim2.new(1, -PositionX - 8 - MoveReservedWidth, 1, -16)
         end
@@ -6440,6 +6440,7 @@ function Library:CreateWindow(WindowInfo)
             BackgroundColor3 = "MainColor",
             PlaceholderText = "Search",
             Size = WindowInfo.SearchbarSize,
+			Position = UDim2.fromScale(0.7,1),
             TextScaled = true,
             Visible = not (WindowInfo.DisableSearch or false),
             Parent = RightWrapper,
