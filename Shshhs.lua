@@ -6373,7 +6373,7 @@ function Library:CreateWindow(WindowInfo)
         local RightWrapper = New("Frame", {
             BackgroundTransparency = 1,
             AnchorPoint = Vector2.new(0, 0.5),
-            Position = UDim2.new(0, InitialSidebarWidth + 8, 0.5, 0),
+            Position = UDim2.new(0, InitialSidebarWidth + 15, 0.5, 0),
             Size = UDim2.new(1, -(InitialSidebarWidth + 16 + MoveReservedWidth), 1, -16),
             Parent = TopBar,
         })
@@ -6440,7 +6440,6 @@ function Library:CreateWindow(WindowInfo)
             BackgroundColor3 = "MainColor",
             PlaceholderText = "Search",
             Size = WindowInfo.SearchbarSize,
-			Position = UDim2.new(0.8,0,0,0),
             TextScaled = true,
             Visible = not (WindowInfo.DisableSearch or false),
             Parent = RightWrapper,
