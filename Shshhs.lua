@@ -7777,11 +7777,13 @@ function Library:CreateWindow(WindowInfo)
             Library:Toggle()
         end)
 
+   if ImageId then					
       New("ImageLabel", {
         Image = ImageId,
-        ImageColor3 = Color3.fromRGB(255,255,255),
+        ImageColor3 = "AccentColor",
         Parent = ToggleButton,
        })
+   end
 
 
         local LockButton = Library:AddDraggableButton("Lock", function(self)
