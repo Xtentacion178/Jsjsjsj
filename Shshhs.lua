@@ -6440,6 +6440,7 @@ function Library:CreateWindow(WindowInfo)
             BackgroundColor3 = "MainColor",
             PlaceholderText = "Search",
             Size = WindowInfo.SearchbarSize,
+			Position = UDim2.new(0.8,0,0,0),
             TextScaled = true,
             Visible = not (WindowInfo.DisableSearch or false),
             Parent = RightWrapper,
