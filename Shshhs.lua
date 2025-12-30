@@ -6186,7 +6186,7 @@ function Library:CreateWindow(WindowInfo)
         end
 
         if LayoutRefs.RightWrapper then
-            local PositionX = SidebarWidth + 15
+            local PositionX = SidebarWidth + 8
             LayoutRefs.RightWrapper.Position = UDim2.new(0, PositionX, 0.5, 0)
             LayoutRefs.RightWrapper.Size = UDim2.new(1, -PositionX - 8 - MoveReservedWidth, 1, -16)
         end
@@ -6373,7 +6373,7 @@ function Library:CreateWindow(WindowInfo)
         local RightWrapper = New("Frame", {
             BackgroundTransparency = 1,
             AnchorPoint = Vector2.new(0, 0.5),
-            Position = UDim2.new(0, InitialSidebarWidth + 15, 0.5, 0),
+            Position = UDim2.new(0, InitialSidebarWidth + 50, 0.5, 0),
             Size = UDim2.new(1, -(InitialSidebarWidth + 16 + MoveReservedWidth), 1, -16),
             Parent = TopBar,
         })
