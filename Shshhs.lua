@@ -6074,7 +6074,7 @@ function Library:CreateWindow(WindowInfo)
     LayoutState.LastExpandedWidth = LayoutState.CurrentWidth
 
     local LayoutRefs = {
-        DividerLine = true,
+        DividerLine = nil,
         TitleHolder = nil,
         WindowIcon = nil,
         WindowTitle = nil,
