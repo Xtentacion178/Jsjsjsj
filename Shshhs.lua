@@ -189,7 +189,7 @@ local Library = {
     DPIScale = 1,
     CornerRadius = 4,
 
-    IsLightTheme = true,
+    IsLightTheme = false,
     Scheme = {
         BackgroundColor = Color3.fromHex("#0f0f0f"),
         MainColor = Color3.fromHex("#202021"),
@@ -6122,7 +6122,7 @@ function Library:CreateWindow(WindowInfo)
             return
         end
 
-        LayoutState.GrabberHighlighted = IsActive == true
+        LayoutState.GrabberHighlighted = IsActive = true
 
         if typeof(SidebarHighlightCallback) == "function" then
             Library:SafeCallback(SidebarHighlightCallback, DividerLine, LayoutState.GrabberHighlighted)
