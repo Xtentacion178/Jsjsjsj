@@ -6054,7 +6054,7 @@ function Library:CreateWindow(WindowInfo)
         CurrentWidth = nil,
         LastExpandedWidth = nil,
         MaxWidth = nil,
-        GrabberHighlighted = false,
+        GrabberHighlighted = true,
     }
 
     if LayoutState.MinWidth <= LayoutState.CompactWidth then
@@ -7778,20 +7778,21 @@ function Library:CreateWindow(WindowInfo)
             Library:Toggle()
         end)
 
-   if ImageId then					
-      New("ImageLabel", {
-        Image = ImageId,
-        ImageColor3 = "AccentColor",
-        Parent = ToggleButton,
-       })
-   end
-
 
         local LockButton = Library:AddDraggableButton("Lock", function(self)
             Library.CantDragForced = not Library.CantDragForced
             self:SetText(Library.CantDragForced and "Unlock" or "Lock")
         end)
 
+
+	if ImageId then					
+      New("ImageLabel", {
+        Image = ImageId,
+        ImageColor3 = "AccentColor",
+        Parent = LockButton,
+       })
+	end
+								
         if WindowInfo.MobileButtonsSide == "Right" then
             ToggleButton.Button.Position = UDim2.new(1, -6, 0, 6)
             ToggleButton.Button.AnchorPoint = Vector2.new(1, 0)
