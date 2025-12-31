@@ -6054,7 +6054,7 @@ function Library:CreateWindow(WindowInfo)
         CurrentWidth = nil,
         LastExpandedWidth = nil,
         MaxWidth = nil,
-        GrabberHighlighted = true,
+        GrabberHighlighted = false,
     }
 
     if LayoutState.MinWidth <= LayoutState.CompactWidth then
@@ -6122,7 +6122,7 @@ function Library:CreateWindow(WindowInfo)
             return
         end
 
-        LayoutState.GrabberHighlighted = IsActive == true
+        LayoutState.GrabberHighlighted = IsActive = true
 
         if typeof(SidebarHighlightCallback) == "function" then
             Library:SafeCallback(SidebarHighlightCallback, DividerLine, LayoutState.GrabberHighlighted)
