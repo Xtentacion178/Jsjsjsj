@@ -6081,7 +6081,7 @@ function Library:CreateWindow(WindowInfo)
         RightWrapper = nil,
         TabsFrame = nil,
         ContainerFrame = nil,
-        SidebarGrabber = nil,
+        SidebarGrabber = true,
         TabPadding = {},
         TabLabels = {},
     }
