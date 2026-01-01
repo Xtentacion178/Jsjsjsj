@@ -7790,7 +7790,7 @@ function Library:CreateWindow(WindowInfo)
       New("ImageLabel", {
         Image = ImageId,
         ImageColor3 = "AccentColor",
-        Parent = LockButton,
+        Parent = ToggleButton.Button,
        })
 	end
 								
