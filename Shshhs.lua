@@ -6340,8 +6340,8 @@ function Library:CreateWindow(WindowInfo)
                 Parent = TitleHolder,
             })
         else
-            WindowIcon = New("ImageLabel", {
-                Image = WindowInfo.,
+            WindowIcon = New("TextButton", {
+                Text = WindowInfo.Title:sub(1,1),
                 TextScaled = true,
                 Size = WindowInfo.IconSize,
                 BackgroundTransparency = 1,
