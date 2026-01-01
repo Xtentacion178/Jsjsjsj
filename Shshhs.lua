@@ -1535,11 +1535,11 @@ function Library:AddOutline(Frame: GuiObject)
     local ShadowStroke = New("UIStroke", {
         Color = "AccentColor",
         Thickness = 2,
-        ZIndex = 2,
+        ZIndex = 3,
         Parent = Frame,
     })
-	local test = New("Frame", {BackgroundColor3 = "AccentColor",BackgroundTransparency = 0.5, Size = UDim2.new(0.3,0,0.3,0), Parent = ShadowStroke})
-    return OutlineStroke, ShadowStroke, test
+	local test = New("Frame", {BackgroundColor3 = "AccentColor",BackgroundTransparency = 0.5, Size = UDim2.new(0.6,0,1,0), Parent = ShadowStroke})
+    return OutlineStroke, ShadowStroke
 end
 
 --// Deprecated \\--
