@@ -1534,8 +1534,8 @@ function Library:AddOutline(Frame: GuiObject)
     })	
     local ShadowStroke = New("UIStroke", {
         Color = "AccentColor",
-        Thickness = 2,
-        ZIndex = 1,
+        Thickness = 4,
+        ZIndex = 5,
         Parent = Frame,
     })
     return OutlineStroke, ShadowStroke
@@ -6340,8 +6340,8 @@ function Library:CreateWindow(WindowInfo)
                 Parent = TitleHolder,
             })
         else
-            WindowIcon = New("TextButton", {
-                Text = WindowInfo.Title:sub(1, 1),
+            WindowIcon = New("ImageLabel", {
+                Image = WindowInfo.,
                 TextScaled = true,
                 Size = WindowInfo.IconSize,
                 BackgroundTransparency = 1,
