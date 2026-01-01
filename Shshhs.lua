@@ -7782,7 +7782,7 @@ function Library:CreateWindow(WindowInfo)
 
         local LockButton = Library:AddDraggableButton("Lock", function(self)
             Library.CantDragForced = not Library.CantDragForced
-            self:SetText(Library.CantDragForced and "Unlock" or "Lock")
+            self:SetImage(Library.CantDragForced and "Unlock" or "Lock")
         end)
 
 
