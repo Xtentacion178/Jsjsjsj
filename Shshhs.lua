@@ -1533,7 +1533,7 @@ function Library:AddOutline(Frame: GuiObject)
         Parent = Frame,
     })	
     local ShadowStroke = New("UIStroke", {
-        Color = "Dark",
+        Color = "AccentColor",
         Thickness = 2,
         ZIndex = 1,
         Parent = Frame,
@@ -6074,14 +6074,14 @@ function Library:CreateWindow(WindowInfo)
     LayoutState.LastExpandedWidth = LayoutState.CurrentWidth
 
     local LayoutRefs = {
-        DividerLine = true,
+        DividerLine = nil,
         TitleHolder = nil,
         WindowIcon = nil,
         WindowTitle = nil,
         RightWrapper = nil,
         TabsFrame = nil,
         ContainerFrame = nil,
-        SidebarGrabber = true,
+        SidebarGrabber = nil,
         TabPadding = {},
         TabLabels = {},
     }
