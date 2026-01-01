@@ -7778,22 +7778,13 @@ function Library:CreateWindow(WindowInfo)
         local ToggleButton = Library:AddDraggableButton("Toggle", function()
             Library:Toggle()
         end)
-
-
+        ToggleButton:SetImage("lock")
+								
         local LockButton = Library:AddDraggableButton("Lock", function(self)
             Library.CantDragForced = not Library.CantDragForced
             self:SetImage(Library.CantDragForced and "Unlock" or "Lock")
         end)
 
-
-	if ImageId then					
-      New("ImageLabel", {
-        Image = ImageId,
-        ImageColor3 = "AccentColor",
-        Parent = ToggleButton.Button,
-       })
-	end
-								
         if WindowInfo.MobileButtonsSide == "Right" then
             ToggleButton.Button.Position = UDim2.new(1, -6, 0, 6)
             ToggleButton.Button.AnchorPoint = Vector2.new(1, 0)
