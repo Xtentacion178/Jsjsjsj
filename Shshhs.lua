@@ -196,7 +196,7 @@ local Library = {
         AccentColor = Color3.fromHex("#00c9ff"),
         OutlineColor = Color3.fromRGB(0,255,0),
         FontColor = Color3.fromHex("#ffffff"),
-        Font = Font.fromEnum(Enum.Font.Lind),
+        Font = Font.fromEnum(Enum.Font.Gotham),
 
         Red = Color3.fromRGB(255, 50, 50),
         Dark = Color3.new(0, 0, 0),
