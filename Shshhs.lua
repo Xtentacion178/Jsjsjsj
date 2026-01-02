@@ -1533,12 +1533,12 @@ function Library:AddOutline(Frame: GuiObject)
         Parent = Frame,
     })	
     local ShadowStroke = New("UIStroke", {
-        Color = "AccentColor",
+        Color = "OutlineColor",
         Thickness = 2,
         ZIndex = 3,
         Parent = Frame,
     })
-	local test = New("Frame", {BackgroundColor3 = "AccentColor",BackgroundTransparency = 0.5, Size = UDim2.new(0.6,0,1,0), Parent = ShadowStroke})
+	
     return OutlineStroke, ShadowStroke
 end
 
@@ -7775,16 +7775,15 @@ function Library:CreateWindow(WindowInfo)
     end
 
     if Library.IsMobile then
-        local ToggleButton = Library:AddDraggableButton("Toggle", function()
+        local ToggleButton = Library:AddDraggableButton("Toggle", function(self)
             Library:Toggle()
+			self:SetImage(ImageId)
         end)
 								
         local LockButton = Library:AddDraggableButton("Lock", function(self)
             Library.CantDragForced = not Library.CantDragForced
             self:SetImage(Library.CantDragForced and "user" or "user")
         end)
-
-		ToggleButton:SetImage(ImageId)
 		
         if WindowInfo.MobileButtonsSide == "Right" then
             ToggleButton.Button.Position = UDim2.new(1, -6, 0, 6)
