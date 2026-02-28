@@ -7781,7 +7781,7 @@ function Library:CreateWindow(WindowInfo)
 	    local openicon = Library:GetIcon("lock-open")
 		
 		if lockicon and openicon then
-		    local img = New("ImageLabel", {Image = Library.CantDragForced and lockicon or openicon, ImageColor3 = Library.CantDragForced and Color3.fromRGB(255,0,0) or Color3.fromRGB(0,255,0), Parent = ScreenGui,BackgroundColor3="BackgroundColor",Position = UDim2.fromOffset(6,6)}
+		    img = New("ImageLabel", {Image = Library.CantDragForced and lockicon or openicon, ImageColor3 = Library.CantDragForced and Color3.fromRGB(255,0,0) or Color3.fromRGB(0,255,0), Parent = ScreenGui,BackgroundColor3="BackgroundColor",Position = UDim2.fromOffset(6,6)})
 	    end
 
 	    Library:MakeDraggable(img,img,true)
