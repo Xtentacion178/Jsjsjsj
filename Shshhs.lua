@@ -7775,7 +7775,7 @@ function Library:CreateWindow(WindowInfo)
     end
 
     if Library.IsMobile then
-		Library.CantDragForced = not Librar.CantDragForced
+		Library.CantDragForced = not Library.CantDragForced
 								
 		local lockicon = Library:GetIcon("lock")
 	    local openicon = Library:GetIcon("lock-open")
