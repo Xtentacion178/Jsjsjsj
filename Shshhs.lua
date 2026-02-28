@@ -7777,12 +7777,11 @@ function Library:CreateWindow(WindowInfo)
     if Library.IsMobile then
         local ToggleButton = Library:AddDraggableButton("Toggle", function(self)
             Library:Toggle()
-			self:SetImage(ImageId)
-        end)
+		end)
 								
         local LockButton = Library:AddDraggableButton("Lock", function(self)
             Library.CantDragForced = not Library.CantDragForced
-            self:SetImage(Library.CantDragForced and "user" or "user")
+            self:SetText(Library.CantDragForced and "user" or "user")
         end)
 		
         if WindowInfo.MobileButtonsSide == "Right" then
