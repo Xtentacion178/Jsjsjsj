@@ -7788,6 +7788,8 @@ function Library:CreateWindow(WindowInfo)
         local ToggleButton = Library:AddDraggableButton("Toggle", function(self)
             Library:Toggle()
 		end)
+
+		FillInstance({"Position"},img)
 								
         --local LockButton = Library:AddDraggableButton("Lock", function(self)
          --   Library.CantDragForced = not Library.CantDragForced
