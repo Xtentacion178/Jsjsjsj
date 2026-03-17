@@ -6529,14 +6529,14 @@ function Library:CreateWindow(WindowInfo)
 
         --// Resize Button
         if WindowInfo.Resizable then
-            ResizeButton = New("ImageButton", {
+            ResizeButton = New("TextButton", {
                 AnchorPoint = Vector2.new(1, 0),
                 BackgroundTransparency = 1,
                 Position = UDim2.fromScale(1, 0),
                 Size = UDim2.fromScale(1, 1),
                 SizeConstraint = Enum.SizeConstraint.RelativeYY,
                 Text = "",
-                Parent = ,
+                Parent = BottomBar,
             })
 
             Library:MakeResizable(MainFrame, ResizeButton, function()
