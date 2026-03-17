@@ -7775,7 +7775,7 @@ function Library:CreateWindow(WindowInfo)
     end
 
     if Library.IsMobile then
-		Library.CantDragForced = not Library.CantDragForced
+		--[[Library.CantDragForced = not Library.CantDragForced
 								
 		local lockicon = Library:GetIcon("lock")
 	    local openicon = Library:GetIcon("lock-open")
@@ -7784,26 +7784,26 @@ function Library:CreateWindow(WindowInfo)
 		    img = New("ImageLabel", {Image = Library.CantDragForced and lockicon or openicon, ImageColor3 = Library.CantDragForced and Color3.fromRGB(255,0,0) or Color3.fromRGB(0,255,0), Parent = ScreenGui,BackgroundColor3="BackgroundColor",Position = UDim2.fromOffset(6,6)})
 	    end
 
-	    Library:MakeDraggable(img,img,true)
+	    Library:MakeDraggable(img,img,true)]]
         local ToggleButton = Library:AddDraggableButton("Toggle", function(self)
             Library:Toggle()
 		end)
 
 		--FillInstance({"Position"},img)
 								
-        --local LockButton = Library:AddDraggableButton("Lock", function(self)
-         --   Library.CantDragForced = not Library.CantDragForced
-          --  self:SetText(Library.CantDragForced and "user" or "user")
-       -- end)
+        local LockButton = Library:AddDraggableButton("Lock", function(self)
+            Library.CantDragForced = not Library.CantDragForced
+           self:SetText(Library.CantDragForced and "user" or "user")
+        end)
 		
         if WindowInfo.MobileButtonsSide == "Right" then
             ToggleButton.Button.Position = UDim2.new(1, -6, 0, 6)
             ToggleButton.Button.AnchorPoint = Vector2.new(1, 0)
 
-            img.Position = UDim2.new(1, -6, 0, 46)
-            img.AnchorPoint = Vector2.new(1, 0)
+            LockButton.Button.Position = UDim2.new(1, -6, 0, 46)
+            LockButton.Button.AnchorPoint = Vector2.new(1, 0)
         else
-            img.Position = UDim2.fromOffset(6, 46)
+            LockButton.Button.Position = UDim2.fromOffset(6, 46)
         end
     end
 
