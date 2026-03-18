@@ -6553,7 +6553,7 @@ function Library:CreateWindow(WindowInfo)
             ImageRectOffset = ResizeIcon and ResizeIcon.ImageRectOffset or Vector2.zero,
             ImageRectSize = ResizeIcon and ResizeIcon.ImageRectSize or Vector2.zero,
             ImageTransparency = 0.5,
-            Position = UDim2.fromOffset(2, 2),
+            Position = UDim2.fromOffset(3, 3),
             Size = UDim2.new(1, -4, 1, -4),
             Parent = ResizeButton,
         })
