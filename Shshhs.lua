@@ -6532,7 +6532,7 @@ function Library:CreateWindow(WindowInfo)
             ResizeButton = New("TextButton", {
                 AnchorPoint = Vector2.new(1, 0),
                 BackgroundTransparency = 1,
-                Position = UDim2.fromScale(1, 0),
+                Position = UDim2.fromScale(0, 1),
                 Size = UDim2.fromScale(1, 1),
                 SizeConstraint = Enum.SizeConstraint.RelativeYY,
                 Text = "",
