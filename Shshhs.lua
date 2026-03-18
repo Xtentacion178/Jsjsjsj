@@ -6532,11 +6532,11 @@ function Library:CreateWindow(WindowInfo)
             ResizeButton = New("TextButton", {
                 AnchorPoint = Vector2.new(1, 0),
                 BackgroundTransparency = 1,
-                Position = UDim2.fromScale(0, 1),
+                Position = UDim2.fromScale(0.8, 0),
                 Size = UDim2.fromScale(1, 1),
                 SizeConstraint = Enum.SizeConstraint.RelativeYY,
                 Text = "",
-                Parent = BottomBar,
+                Parent = TopBar,
             })
 
             Library:MakeResizable(MainFrame, ResizeButton, function()
