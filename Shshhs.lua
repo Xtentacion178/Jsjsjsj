@@ -7789,20 +7789,27 @@ function Library:CreateWindow(WindowInfo)
        --[[ local ToggleButton = Library:AddDraggableButton("Toggle", function(self)
             Library:Toggle()
 		end)]]
-       local Toggleimg = New("ImageButton", {
-		Image = "rbxassetid://7733960981",
-		Position = UDim2.fromOffset(6,6),
-		ZIndex = 10,
-		Parent = ScreenGui})
+       Toggleimg = New("ImageButton", {
+		   Image = "rbxassetid://7733960981",
+		   BackgroundColor3 = "Dark",
+		   Position = UDim2.fromOffset(6,6),
+		   ZIndex = 10,
+		   Parent = ScreenGui,
+										
+			DPIExclude = {
+				Position = true
+										},
+	    })
         Toggleimg.MouseButton1Click:Connect(function()
 				Library:Toggle()
 										end)
-                New("UICorner", {CornerRadius = UDim.new(0,WindowInfo.CornerRadius), Parent = Toggleimg})
+								
+         New("UICorner", {CornerRadius = UDim.new(0,WindowInfo.CornerRadius), Parent = Toggleimg,
+									})
 		
 		Library:MakeDraggable(Toggleimg, Toggleimg, true)
-        
 		
-		--FillInstance({"Position"},img)
+		
 		
         if WindowInfo.MobileButtonsSide == "Right" then
             Toggleimg.Position = UDim2.new(1, -6, 0, 6)
