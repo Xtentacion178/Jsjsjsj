@@ -193,7 +193,7 @@ local Library = {
     Scheme = {
         BackgroundColor = Color3.fromHex("#0f0f0f"),
         MainColor = Color3.fromHex("#202021"),
-        AccentColor = Color3.fromRGB(0,255,0),
+        AccentColor = Color3.fromRGB(255,0,0),
         OutlineColor = Color3.fromRGB(40,40,40),
         FontColor = Color3.fromHex("#ffffff"),
         Font = Font.fromEnum(Enum.Font.Gotham),
@@ -1529,17 +1529,19 @@ function Library:AddOutline(Frame: GuiObject)
     local OutlineStroke = New("UIStroke", {
         Color = "OutlineColor",
         Thickness = 1,
-        ZIndex = 2,
-        Parent = Frame,
+		Transparency = 0,
+		Parent = Frame,
     })	
     local ShadowStroke = New("UIStroke", {
         Color = "OutlineColor",
         Thickness = 2,
-        ZIndex = 3,
+        Transparency = 0.4,
+		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+		LineJoinMode = Enum.LineJoinMode.Round,
         Parent = Frame,
     })
 	
-    return OutlineStroke, ShadowStroke
+    return OutlineStroke, ShadowStroke	 
 end
 
 --// Deprecated \\--
@@ -6292,8 +6294,8 @@ function Library:CreateWindow(WindowInfo)
 
         if WindowInfo.BackgroundImage then
             New("ImageLabel", {
-                Image = "rbxassetid://10618928818",
-				ImageColor3 = WindowInfo.BackgroundImageColor,
+                Image = "rbxassetid://5028857084",
+				ImageColor3 = "AccentColor",
                 Position = UDim2.fromScale(0, 0),
                 Size = UDim2.fromScale(1, 1),
                 ScaleType = Enum.ScaleType.Stretch,
