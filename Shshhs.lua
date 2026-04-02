@@ -7189,7 +7189,24 @@ function Library:CreateWindow(WindowInfo)
                     PaddingTop = UDim.new(0, 7),
                     Parent = GroupboxContainer,
                 })
-            end
+
+				local img = Library:GetCustomIcon("chevron-up")
+			    local Close = New("ImageButton", {
+					Image = img.Url,
+					Position = UDim2.new(1, -10, 1,0.5,0),
+					Parent = GroupboxHolder,
+										})
+
+				local click = false
+				Close.MouseButton1Click:Connect(function()
+					click = not click
+					if click then
+					  GroupboxContainer.Size = UDim2.new(1,0)
+											else
+					  GroupboxContainer.Size = UDim2.new(1,0, 1,-35)     
+											end
+										end)
+		end
 
             local Groupbox = {
                 BoxHolder = BoxHolder,
