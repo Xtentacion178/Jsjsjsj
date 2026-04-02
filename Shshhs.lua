@@ -7190,12 +7190,14 @@ function Library:CreateWindow(WindowInfo)
                     Parent = GroupboxContainer,
                 })
 
-				local img = Library:GetCustomIcon("chevron-up")
+				local img = Library:GetIcon("chevron-up")
+			    if img then
 			    local Close = New("ImageButton", {
 					Image = img.Url,
 					Position = UDim2.new(1, -10, 1,0.5,0),
 					Parent = GroupboxHolder,
 										})
+									end
 
 				local click = false
 				Close.MouseButton1Click:Connect(function()
